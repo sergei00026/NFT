@@ -17,12 +17,10 @@ export const MobileMenu = () => {
 
   const closeMenu = () => setOpen(false);
 
-  // 🔒 Scroll lock
   useScrollLock(open);
 
-  // 🔁 Close on route change
   useEffect(() => {
-    closeMenu();
+    if (open) closeMenu();
   }, [pathname]);
 
   return (

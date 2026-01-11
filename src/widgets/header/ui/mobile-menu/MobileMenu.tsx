@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
@@ -15,12 +15,11 @@ export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const closeMenu = () => setOpen(false);
-
   useScrollLock(open);
 
-  useEffect(() => {
-    if (open) closeMenu();
+  useLayoutEffect(() => {
+    const id = setTimeout(() => setOpen(false), 0);
+    return () => clearTimeout(id);
   }, [pathname]);
 
   return (
@@ -35,9 +34,9 @@ export const MobileMenu = () => {
             transition={{ type: 'tween', duration: 0.3 }}
           >
             <NavigateList onItemClick={() => setOpen(false)} />
-            <SocialLinks onItemClick={closeMenu} />
+            <SocialLinks onItemClick={() => setOpen(false)} />
             <PolymorphicButton
-              onClick={closeMenu}
+              onClick={() => setOpen(false)}
               className={s.btnButton}
             >
               Connect Wallet

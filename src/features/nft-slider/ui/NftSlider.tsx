@@ -59,9 +59,18 @@ export const NftSlider = () => {
         className={s.swiper}
         modules={[Navigation]}
         onSwiper={setSwiperInstance}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+        onBeforeInit={(swiper) => {
+          setTimeout(() => {
+            if (!prevRef.current || !nextRef.current) return;
+
+            swiper.params.navigation = {
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            };
+            swiper.navigation.destroy();
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }, 0);
         }}
         loop
         grabCursor

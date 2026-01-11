@@ -4,6 +4,7 @@ import { StoreProvider } from '@/app/providers/StoreProvider';
 import '@/shared/styles/globals.scss';
 import { Header } from '@/widgets/header/ui/header';
 import { Footer } from '@/widgets/footer/ui/footer/Footer';
+import type { ReactNode } from 'react';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -41,11 +42,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang='en'>
-      <body className={`${poppins.variable} ${inter.variable}`}>
+      <body className={`${poppins.variable} ${inter.variable} ${outfit.variable} ${publicSans.variable}`}>
         <StoreProvider>
           <div className='wrapper'>
             <Header />

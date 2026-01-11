@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+
 const { join } = require('node:path');
 const fs = require('fs');
 const fsp = fs.promises;

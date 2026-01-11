@@ -5,33 +5,27 @@ import pluginReact from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  // Игнорируемые файлы
   {
-    ignores: ['.next/**', 'out/**', 'build/**', 'next-env.d.ts', 'node_modules/**', '*.cjs', '**/*.cjs'],
+    ignores: ['.next/**', 'out/**', 'build/**', 'node_modules/**', 'next-env.d.ts', '**/*.cjs'],
   },
-  // Базовый JS конфиг
+
+  // Базовые правила JS
   js.configs.recommended,
 
-  // TypeScript конфиг
+  // TypeScript
   ...tseslint.configs.recommended,
 
-  // React конфиг
+  // React
   pluginReact.configs.flat.recommended,
 
+  // Основные правила для JS/TS/React файлов
   {
     files: ['**/*.{js,mjs,ts,mts,cts,jsx,tsx}'],
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/jsx-uses-react': 'off',
       'react/prop-types': 'off',
-      'no-unused-vars': [
-        'error',
-        {
-          vars: 'all',
-          args: 'none',
-        },
-      ],
-      // 'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', { vars: 'all', args: 'none' }],
       semi: 'error',
       'no-console': 'error',
       'no-debugger': 'error',
@@ -39,12 +33,11 @@ export default defineConfig([
       'comma-dangle': ['error', 'always-multiline'],
     },
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      globals: { ...globals.browser, ...globals.node },
     },
   },
+
+  // Storybook
   {
     files: ['**/*.stories.tsx', '**/*.stories.ts', '**/storybook/**'],
     rules: {

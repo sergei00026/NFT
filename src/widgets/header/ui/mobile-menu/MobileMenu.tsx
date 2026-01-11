@@ -1,6 +1,6 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
@@ -17,7 +17,7 @@ export const MobileMenu = () => {
 
   useScrollLock(open);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const id = setTimeout(() => setOpen(false), 0);
     return () => clearTimeout(id);
   }, [pathname]);

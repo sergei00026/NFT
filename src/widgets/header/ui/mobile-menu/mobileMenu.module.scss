@@ -1,27 +1,27 @@
 .drawer {
   position: fixed;
+  left: 0;
   bottom: 0;
-  right: 0;
-  width: 100%;
-  height: calc(100vh - 111px);
+  width: 100vw;
+  height: calc(100dvh - 111px);
   background: #f9f9f9;
   z-index: 100;
   padding: 45px 30px 40px;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   align-items: flex-start;
   gap: 44px;
   overflow-y: auto;
 }
 
-.burger{
+.burger {
   display: none;
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {
     display: grid;
     place-items: center;
-      z-index: 1000;
+    z-index: 1000;
     outline: none;
     background-color: transparent;
     border: none;
@@ -30,7 +30,8 @@ flex-direction: column;
     margin-left: auto;
   }
 }
-.btnButton{
+
+.btnButton {
   margin-top: auto;
   font-weight: 600;
   font-size: 20px;

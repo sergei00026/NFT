@@ -1,0 +1,12 @@
+export { default as BurgerIcon } from './BurgerIcon';
+export { default as CloseIcon } from './CloseIcon';
+export { default as Facebook } from './Facebook';
+export { default as Firstpagearrow } from './Firstpagearrow';
+export { default as Inst } from './Inst';
+export { default as Left } from './Left';
+export { default as Linkedin } from './Linkedin';
+export { default as Logoicon } from './Logoicon';
+export { default as MdiEthereum } from './MdiEthereum';
+export { default as Points } from './Points';
+export { default as Right } from './Right';
+export { default as Twitter } from './Twitter';

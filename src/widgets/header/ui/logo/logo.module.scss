@@ -1,0 +1,34 @@
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: calc(7px * var(--ui-scale));
+}
+
+.icon {
+  path {
+    fill: black;
+  }
+
+  width: calc(53px * var(--ui-scale));
+  height: calc(53px * var(--ui-scale));
+  @media (max-width: 1030px) {
+    width: 38px;
+    height: 38px;
+  }
+  @media (max-width: 768px) {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: calc(22px * var(--ui-scale));
+  line-height: 109%;
+  color: #000;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

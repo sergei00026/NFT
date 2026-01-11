@@ -1,0 +1,147 @@
+.heroImages {
+}
+
+.img {
+  display: inline-block;
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  right: calc(-100% + -40px);
+  top: calc(181px * var(--ui-scale));
+  left: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 768px) {
+    right: calc(-100% + -16px);
+top: 100px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: calc(-100% + calc(-22px * var(--ui-scale)));
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: calc(-126px * var(--ui-scale));
+  z-index: 2;
+  @media (max-width: 1300px) {
+    top: -100px;
+  }
+  @media (max-width: 768px) {
+    top: -70px;
+  }
+}
+
+.arrowIcon {
+  width: calc(128px * var(--ui-scale));
+  height: calc(124px * var(--ui-scale));
+  @media (max-width: 1300px) {
+    width: 92px;
+    height: 88px;
+  }
+  @media (max-width: 768px) {
+    width: 59px;
+    height: 56px;
+  }
+}
+
+.points {
+  position: absolute;
+  right: -50%;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  @media (max-width: 1300px) {
+    right: -40%;
+  }
+}
+
+.pointsIcon {
+  width: calc(173px * var(--ui-scale));
+  height: calc(400px * var(--ui-scale));
+  @media (max-width: 1300px) {
+    width: 123px;
+    height: 284px;
+  }
+  @media (max-width: 768px) {
+    width: 93px;
+    height: 213px;
+  }
+}
+
+.onlyBefore {
+  display: inline-block;
+  position: relative;
+  @media (max-width: 1920px) {
+    width: clamp(
+            210px,
+            30vw,
+            391px
+    );
+    height: clamp(
+            210px,
+            30vw,
+            395px
+    );
+  }
+  @media (max-width: 1300px) {
+    width: clamp(
+            210px,
+            30vw,
+            280px
+    );
+    height: clamp(
+            210px,
+            30vw,
+            280px
+    );
+  }
+
+  @media (min-width: 1920px) {
+    width: clamp(
+            391px,
+            30vw,
+            calc(391px * var(--ui-scale))
+    );
+    height: clamp(
+            395px,
+            30vw,
+            calc(395px * var(--ui-scale))
+    );
+  }
+
+
+  &::before {
+    content: '';
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 100%;
+    height: 70%;
+
+    transform: translateX(-50%);
+    filter: blur(calc(80px * var(--ui-scale)));
+
+    background: radial-gradient(
+                    ellipse at bottom,
+                    rgba(124, 58, 237, 0.9) 0%,
+                    rgba(124, 58, 237, 0.6) 30%,
+                    rgba(124, 58, 237, 0.2) 50%,
+                    transparent 70%
+    );
+    z-index: 1;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}

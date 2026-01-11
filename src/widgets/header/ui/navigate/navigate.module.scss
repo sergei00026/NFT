@@ -1,0 +1,29 @@
+.navigate {
+  @media (max-width: 768px) {
+    display: none;
+
+  }
+}
+
+.list {
+  display: flex;
+  gap: calc(40px * var(--ui-scale));
+  align-items: center;
+  @media (max-width: 1030px) {
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 40px;
+      line-height: 105%;
+      color: #606060;
+    }
+  }
+}
+

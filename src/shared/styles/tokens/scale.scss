@@ -1,0 +1,28 @@
+:root {
+  --ui-scale: clamp(
+          1,
+          calc(1 + (100vw - 1920px) / 960px),
+          3
+  ) ;
+}
+
+///* FullHD */
+//@media (min-width: 1920px) {
+//  :root {
+//    --ui-scale: 1.5;
+//  }
+//}
+//
+///* 2K */
+//@media (min-width: 2560px) {
+//  :root {
+//    --ui-scale: 1.9;
+//  }
+//}
+//
+///* 4K */
+//@media (min-width: 3840px) {
+//  :root {
+//    --ui-scale: 3;
+//  }
+//}

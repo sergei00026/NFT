@@ -1,0 +1,114 @@
+.card {
+  position: relative;
+
+  border-radius: calc(18px * var(--ui-scale));
+  padding: calc(10px * var(--ui-scale));
+  display: flex;
+  flex-direction: column;
+  gap: calc(20px * var(--ui-scale));
+  height: 100%;
+  flex: 1 1 auto;
+
+  box-shadow: calc(29px * var(--ui-scale)) calc(29px * var(--ui-scale)) calc(45px * var(--ui-scale)) 0 rgba(199, 199, 199, 0.6);
+  background: #fff;
+  @media (max-width: 1300px) {
+    gap: 14px;
+  }
+}
+
+.timer {
+  position: absolute;
+  top: calc(28px * var(--ui-scale));
+  right: calc(25px * var(--ui-scale));
+
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: calc(14px * var(--ui-scale));
+  line-height: 100%;
+  color: #fff;
+
+  border: calc(1.18px * var(--ui-scale)) solid rgba(28, 29, 32, 0.08);
+  border-radius: calc(10px * var(--ui-scale));
+  padding: calc(5px * var(--ui-scale)) calc(15px * var(--ui-scale));
+  min-height: calc(34px * var(--ui-scale));
+  min-width: calc(130px * var(--ui-scale));
+
+  backdrop-filter: blur(calc(4px * var(--ui-scale)));
+  box-shadow: 0 calc(5px * var(--ui-scale)) calc(14px * var(--ui-scale)) 0 rgba(28, 29, 32, 0.08);
+  background: rgba(28, 29, 32, 0.35);
+
+
+  @media (max-width: 1300px) {
+    top: 20px;
+    right: 20px;
+    font-size: 10px;
+    min-width: 87px;
+    min-height: 25px;
+    padding: 5px 10px;
+  }
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  user-select: none;
+}
+
+.name {
+  font-weight: 600;
+  font-size: calc(22px * var(--ui-scale));
+  line-height: 109%;
+  color: #141416;
+  @media (max-width: 1300px) {
+    font-size: 16px;
+  }
+}
+
+.boxBid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(10px * var(--ui-scale));
+  flex: 1 1 auto;
+}
+
+.bid {
+  display: flex;
+  flex-direction: column;
+  gap: calc(3px * var(--ui-scale));
+
+  span {
+    font-weight: 400;
+    font-size: calc(14px * var(--ui-scale));
+    line-height: 100%;
+    color: #94a3b8;
+    @media (max-width: 1300px) {
+      font-size: 11px;
+    }
+  }
+
+  strong {
+    font-weight: 500;
+    font-size: calc(16px * var(--ui-scale));
+    line-height: 150%;
+    color: #141416;
+    display: flex;
+    align-items: center;
+    gap: calc(4px * var(--ui-scale));
+    @media (max-width: 1300px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.btn {
+  padding: calc(5px * var(--ui-scale)) calc(6px * var(--ui-scale));
+  min-height: calc(50px * var(--ui-scale));
+  font-size: calc(14px * var(--ui-scale));
+  @media (max-width: 1300px) {
+    min-height: 38px;
+    font-size: 10px;
+  }
+}

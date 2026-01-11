@@ -1,0 +1,23 @@
+import type { SVGProps } from 'react';
+import { Ref, forwardRef, memo } from 'react';
+const SvgRight = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={14}
+    height={9}
+    fill='none'
+    viewBox='0 0 14 9'
+    ref={ref}
+    {...props}
+  >
+    <path
+      fill='currentcolor'
+      fillRule='evenodd'
+      d='M9.09.265a1 1 0 0 1 1.414.057l3.23 3.5a1 1 0 0 1 0 1.356l-3.23 3.5a1 1 0 1 1-1.47-1.356L10.716 5.5H1a1 1 0 0 1 0-2h9.716L9.034 1.678A1 1 0 0 1 9.091.265'
+      clipRule='evenodd'
+    />
+  </svg>
+);
+const ForwardRef = forwardRef(SvgRight);
+const Memo = memo(ForwardRef);
+export default Memo;
